@@ -1,7 +1,5 @@
-/*
-Write a“Welcoming Program” (Hello Python, what is your name, what is your age,  …)  taking slides 18 and 19 as role model
-StarExercise: Write a more elaborated Interview, using input and the given answers.  Try to include if  …  else, maybe even while … (guess my name, guess my age, call me be my name, …)
-*/
+# Write a“Welcoming Program” (Hello Python, what is your name, what is your age,  …)  taking slides 18 and 19 as role model
+# StarExercise: Write a more elaborated Interview, using input and the given answers.  Try to include if  …  else, maybe even while … (guess my name, guess my age, call me be my name, …)
 
 
 print("Hello Python!")
