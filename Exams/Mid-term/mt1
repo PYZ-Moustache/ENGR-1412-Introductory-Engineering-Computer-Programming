@@ -1,0 +1,19 @@
+# 1
+
+print("Welcome! My name is Yizhen.")
+name=input("What's your name? ")
+print(f"Hello, {name}!")
+while True:
+    try:
+        age=int(input("Guess my age (between 0 and 25): "))
+        if age==18:
+            print("Good job! I'm 18 years old.")
+            break
+        elif age>25 or age<0:
+            print("My age is between 0 and 25.")
+        elif age>18:
+            print("too high")
+        elif age<18:
+            print("too small")
+    except ValueError:
+        print("Please enter a number.")
