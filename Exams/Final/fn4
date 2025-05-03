@@ -1,0 +1,12 @@
+# 4
+def en(n):
+    en = 0
+    for i in range(n+1):
+        en += (1 / math.factorial(i))
+    return en
+
+print(en(5))
+print(en(10))
+print(math.e)
+print("math.e - en(5) =", math.e-en(5))
+print("math.e - en(10) =", math.e-en(10))
