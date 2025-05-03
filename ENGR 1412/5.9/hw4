@@ -1,0 +1,14 @@
+# Generate a polynomial from the roots -3,2,1,2,3
+# Show a figure for that polynomial in an appropriate range
+# Show a figure for the polynomial with the roots -3,2,1,2,3
+
+
+po = np.polynomial.Polynomial([-3,2,1,2,3])
+print(po)
+
+x_5 = np.linspace(-3,3,1000)
+y_5 = po(x_5)
+plt.plot(x_5, y_5)
+plt.show()
+
+# **SAME**
