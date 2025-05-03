@@ -1,0 +1,15 @@
+# Code the Teachers Frame as described above, by items
+
+
+import pandas as pd
+pd.__version__
+
+df = pd.DataFrame([
+    ['Bernd Wuennemann','Germany','Geography',62],
+    ['Muhamed Hassan','Pakistan','Chemistry',38],
+    ['Inna Safanowa','Russia','Geology',42],
+    ['Saeid Pirasteh','Canada','Geomatics',48],
+    ['Lutz Pluemer','Germany','Computer Science',63]
+    ],
+    columns = ['Name','Country','Discipline','Age'])
+df
