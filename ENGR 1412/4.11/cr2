@@ -1,7 +1,5 @@
-/*
-Write all the functions mentioned in this lectures and make a nice wrapping for the output such as  “6 is the factorial of 3”
-Maybe:  “Hi Liu, you asked me for the factorial of 3. I can tell you. It is 6”
-*/
+# Write all the functions mentioned in this lectures and make a nice wrapping for the output such as  “6 is the factorial of 3”
+# Maybe:  “Hi Liu, you asked me for the factorial of 3. I can tell you. It is 6”
 
 
 def factorial(n):
