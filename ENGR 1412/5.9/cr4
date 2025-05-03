@@ -1,0 +1,22 @@
+# Import polynomials and generate polynomial
+# Calculate coef, deriv, integ and root from the polynomial
+# Use the linespace method do derive xs and ys of that polynomial
+# Import pyplot and show this polynomial in a given range
+# Show sinandcosin onefigure, with different colors and symbols for points and lines
+
+
+from numpy import polynomial
+po = np.polynomial.Polynomial([1,-2,-3,4])
+print(po)
+
+print("coef:",po.coef)
+print("deriv:",po.deriv())
+print("integ:",po.integ())
+print("roots:",po.roots())
+
+xs = np.linspace(-5,5,100)
+ys = po(xs)
+
+import matplotlib.pyplot as plt
+plt.plot(xs, ys)
+plt.show()
