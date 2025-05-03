@@ -1,0 +1,21 @@
+# Star exercise: a palindrom list of numbers is a list which looks identical when read in both directions.  [1, 2, 3, 4 , 3, 2, 1 ] is a palindrom. Write a recursive function which tests if a list is a palindrom. Hint: lst[0] gives the first element, lst[-1] the last. You can use pop to remove elements
+
+
+def palindrome(lst):
+    if len(lst) <= 1:
+        return True
+    elif lst[0] == lst[-1]:
+        lst.pop(0)
+        lst.pop(-1)
+        return palindrome(lst)
+    else:
+        return False
+
+lst_input = input("Please enter a list in the form '1,2,3,4,5': ")
+lst = [int(i) for i in lst_input.split(',')]
+
+#lst = [1, 2, 3, 4, 3, 2, 1]
+if palindrome(lst) == True:
+    print("It is a palindrome.")
+else:
+    print("It is not a palindrom")
