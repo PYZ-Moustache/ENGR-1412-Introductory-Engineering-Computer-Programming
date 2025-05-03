@@ -1,0 +1,9 @@
+# Generate matrices with ones and eye and look at their shape
+
+
+Ones = np.ones([3,2])
+print(Ones)
+print("shape:",Ones.shape,"\n")
+Eye = np.eye(4,4)
+print(Eye)
+print("shape:",Eye.shape)
