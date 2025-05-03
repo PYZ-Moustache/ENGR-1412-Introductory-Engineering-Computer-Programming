@@ -1,6 +1,4 @@
-/*
-Write a Program Cell for the minimum of two numbers
-*/
+# Write a Program Cell for the minimum of two numbers
 
 
 a = input('Please enter the first number: ')
