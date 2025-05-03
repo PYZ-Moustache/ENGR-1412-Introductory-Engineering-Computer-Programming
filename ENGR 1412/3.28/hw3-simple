@@ -1,0 +1,15 @@
+/*
+Write a“Welcoming Program” (Hello Python, what is your name, what is your age,  …)  taking slides 18 and 19 as role model
+StarExercise: Write a more elaborated Interview, using input and the given answers.  Try to include if  …  else, maybe even while … (guess my name, guess my age, call me be my name, …)
+*/
+
+
+print('Hello Python')
+name = input('Guess my name: ')
+while name != 'Yizhen':
+    name = input('Try again: ')
+print('Great job! My name is', name)
+age = int(input('Guess my age: '))
+while age != 18:
+    age = int(input('Try again: '))
+print('Great job! I am', age, 'years old')
