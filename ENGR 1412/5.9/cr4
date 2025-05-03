@@ -2,7 +2,6 @@
 # Calculate coef, deriv, integ and root from the polynomial
 # Use the linespace method do derive xs and ys of that polynomial
 # Import pyplot and show this polynomial in a given range
-# Show sinandcosin onefigure, with different colors and symbols for points and lines
 
 
 from numpy import polynomial
