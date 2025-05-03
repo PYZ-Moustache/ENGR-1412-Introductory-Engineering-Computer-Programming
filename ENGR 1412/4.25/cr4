@@ -1,0 +1,9 @@
+#Write two sequences, one for the Chinese names and the English names, and construct the dictionary from these two sequences
+
+
+cities_zh = ['北京', '上海', '广州', '深圳', '成都']
+cities_en = ['Beijing', 'Shanghai', 'Guangzhou', 'Shenzhen', 'Chengdu']
+cities_dict = {cities_zh[i]:cities_en[i] for i in range(len(cities_zh))}
+print(cities_dict.keys())
+print(cities_dict.values())
+print(cities_dict.items())
