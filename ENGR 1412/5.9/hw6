@@ -1,0 +1,11 @@
+# Show another figure for the polynomial with the roots -3,2,1,2,3 and emphasize its roots and the roots of its derivative
+
+plt.plot(x_5, y_5, 'b', label = 'polynomial')
+plt.plot(x_deriv, y_deriv, 'g', label = 'derivative')
+plt.axhline(y=0, linestyle='-', color='k')
+for p in po.roots():
+    plt.plot(p, 0, 'xb', markersize=10)
+for p in derivative.roots():
+    plt.plot(p, 0, 'xg', markersize=10)
+plt.legend()
+plt.show()
