@@ -1,0 +1,19 @@
+# Write a Dictionary for 5 Chinese Cities in English and Chinese Characters, taking the countries list as model
+
+
+cities = {"Beijing": "北京",
+          "Shanghai": "上海",
+          "Guangzhou": "广州",
+          "Shenzhen": "深圳",
+          "Chengdu": "成都"}
+inputName = input("Please enter the city's name in English: ")
+inputName = inputName.lower().title()
+if inputName in cities:
+    print(f"The Chinese name of {inputName} is {cities[inputName]}")
+else:
+    print("Sorry, the city name is not in our dictionary.")
+
+#Add one more city
+
+cities["Urumqi"] = "乌鲁木齐"
+print("The dictionary after adding one more city:", cities)
