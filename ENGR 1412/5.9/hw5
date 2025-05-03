@@ -1,0 +1,18 @@
+# Finds its derivative and its integral
+# Show a figure with the function, its integral and its derivative with different colors.
+  
+
+derivative = po.deriv()
+integral = po.integ()
+print("derivative:", derivative)
+print("integral:", integral)
+
+x_deriv = np.linspace(-3,3,1000)
+y_deriv = derivative(x_deriv)
+x_integ = np.linspace(-3,3,1000)
+y_integ = integral(x_integ)
+plt.plot(x_5, y_5, 'b', label = 'polynomial')
+plt.plot(x_deriv, y_deriv, 'g', label = 'derivative')
+plt.plot(x_integ, y_integ, 'r', label = 'integral')
+plt.legend()
+plt.show()
