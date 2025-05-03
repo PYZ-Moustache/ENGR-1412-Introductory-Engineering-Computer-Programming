@@ -9,3 +9,7 @@ ENGR 1412 工程计算机编程概论 Introductory Engineering Computer Programm
 教材：The Python Guide for Beginners (Renan Moura)
 
 参考网课：《计算导论与C语言基础》北京大学（1.多掌握一种语言不是坏事 2.清晰地解释了编程的底层原理，非常有助于学习）
+
+如果对您有帮助的话，请帮忙点个星星🌟，谢谢~
+
+完整资料存储库请见：https://github.com/PYZ-Moustache/SWJTU-OSU_BSCV/
