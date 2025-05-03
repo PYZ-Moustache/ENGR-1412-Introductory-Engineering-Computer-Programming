@@ -1,0 +1,7 @@
+# Generate a List of the even numbers up to 32 and print them with a for-loop
+
+
+n = 0
+for i in range(32):
+    n += 2
+    print(n)
