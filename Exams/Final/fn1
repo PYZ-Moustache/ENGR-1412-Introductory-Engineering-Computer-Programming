@@ -1,0 +1,9 @@
+# 1
+list1 = [5, 20, 15, 20, 25, 50, 20]
+for i in range(len(list1)):
+    try:
+        if list1[i] == 20:
+            list1.pop(i)
+    except:
+        break
+print(list1)
