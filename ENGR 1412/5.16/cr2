@@ -1,0 +1,8 @@
+# Code the Teachers Frame as described above, by columns
+
+
+data = {'Name':['Bernd Wuennemann','Muhamed Hassan','Inna Safanowa','Saeid Pirasteh','Lutz Pluemer'],\
+'Country':['Germany','Pakistan','Russia','Canada','Germany'],\
+'Discipline':['Geography','Chemistry','Geology','Geomatics','Computer Science'],\
+'Age':[62,38,42,48,63]}
+data
