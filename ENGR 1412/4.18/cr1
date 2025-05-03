@@ -1,4 +1,4 @@
-# 1 Write the recursive factorial function
+# Write the recursive factorial function
 
 
 def factorial(n):
