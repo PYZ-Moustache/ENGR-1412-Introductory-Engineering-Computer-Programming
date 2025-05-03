@@ -1,0 +1,7 @@
+# Import the math module and calculate pi, sin(pi) and cos(pi)
+
+
+import math
+print(math.pi)
+print(math.sin(math.pi))
+print(math.cos(math.pi))
