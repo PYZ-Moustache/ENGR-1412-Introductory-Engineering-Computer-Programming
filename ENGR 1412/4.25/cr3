@@ -13,7 +13,9 @@ if inputName in cities:
 else:
     print("Sorry, the city name is not in our dictionary.")
 
+
 #Add one more city
+
 
 cities["Urumqi"] = "乌鲁木齐"
 print("The dictionary after adding one more city:", cities)
