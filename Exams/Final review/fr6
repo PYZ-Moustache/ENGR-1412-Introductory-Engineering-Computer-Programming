@@ -1,0 +1,31 @@
+# 假设你有一个包含学生考试成绩的数据集，其中包括学生姓名、科目和得分。你的目标是分析每个科目的平均成绩和及格率。 你的任务：
+# 从CSV文件中读取数据集。
+# 计算每个科目的平均成绩。
+# 确定及格的标准，例如，分数大于等于70为及格。
+# 计算每个科目的及格率（即及格人数占总人数的比例）。
+# 打印每个科目的平均成绩和及格率。
+
+
+import pandas as pd
+import math
+
+# 读取数据集
+import chardet
+with open(r"C:\Users\panyi\Desktop\工程计算机编程概论\data.csv", 'rb') as f:
+    result = chardet.detect(f.read())
+df = pd.read_csv(r"C:\Users\panyi\Desktop\工程计算机编程概论\data.csv", encoding=result['encoding'])
+
+# 计算每个科目的平均成绩
+mean_scores = df.groupby('科目')['得分'].mean()
+
+# 确定及格标准
+passing_score = 70
+
+# 计算每个科目的及格率
+passing_rates = df.groupby('科目')['得分'].apply(lambda x: (x >= passing_score).mean())
+
+# 打印结果
+print("每个科目的平均成绩：")
+print(mean_scores)
+print("\n每个科目的及格率：")
+print(passing_rates)
