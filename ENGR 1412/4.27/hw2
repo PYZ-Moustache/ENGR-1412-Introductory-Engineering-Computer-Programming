@@ -1,0 +1,10 @@
+# Write a dictionary with student id as key and name as value.
+# Take 10 of your classmates and enter the values stepwise.
+
+
+students = {}
+for i in range(10):
+    id = (input(f"Enter student {i+1} ID: "))
+    name = input(f"Enter student {i+1} name: ")
+    students[id] = name
+print(students)
