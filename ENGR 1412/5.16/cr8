@@ -1,0 +1,4 @@
+# Generate the Bar Chart
+
+
+df.plot(x = "Capital", y = "Inhabitants (Mio.)", kind = "barh")
