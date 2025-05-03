@@ -1,7 +1,5 @@
-/*
-Write a Program Cell for the Factorial
-Star Exercise: experiment with small and larger integers (not larger than 1000)
-*/
+# Write a Program Cell for the Factorial
+# Star Exercise: experiment with small and larger integers (not larger than 1000)
 
 
 n = int(input("Enter a number: "))
