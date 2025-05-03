@@ -1,0 +1,6 @@
+/*
+Print 6 numbers in the same line with “  +++   “ in between
+*/
+
+
+print(1, 2, 3, 4, 5, 6, sep=" +++ ")
