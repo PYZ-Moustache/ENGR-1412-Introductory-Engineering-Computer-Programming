@@ -1,0 +1,45 @@
+/*
+Write a“Welcoming Program” (Hello Python, what is your name, what is your age,  …)  taking slides 18 and 19 as role model
+StarExercise: Write a more elaborated Interview, using input and the given answers.  Try to include if  …  else, maybe even while … (guess my name, guess my age, call me be my name, …)
+*/
+
+
+print("Hello Python!")
+name = input("What is your name? ")
+age = input("What is your age? ")
+print("Nice to meet you, " + name + "!")
+print("You are " + age + " years old.")
+
+def play_game():
+  answer = input("What is my name? ")
+  if answer.lower() == "python":
+    print("You guessed it! That's my name.")
+  else:
+    print("Sorry, that's not my name. Keep guessing!")
+
+  while True:
+    try:
+      age_guess = int(input("How old do you think I am? "))
+    except ValueError:
+      print("Please enter a number.")
+      continue
+
+    if age_guess == 20:
+      print("Wow, you got it right! I am 20 years old.")
+      break
+    elif age_guess < 20:
+      print("Sorry, I am older than that. Keep guessing!")
+    else:
+      print("Sorry, I am younger than that. Keep guessing!")
+
+  call_me = input("What should I call you? ")
+  print("Nice to meet you, " + call_me + "!")
+
+play_game()
+
+play_again = input("Do you want to play again? (yes or no) ")
+while play_again.lower() == "yes":
+  play_game()
+  play_again = input("Do you want to play again? (yes or no) ")
+
+print("Thanks for playing! Goodbye.")
