@@ -1,0 +1,12 @@
+# 5
+countries = ['Germany', 'Italy', 'France', 'Netherlands', 'Finland', 'Ukraine']  # keys
+capitals = ['Berlin', 'Rome', 'Paris', 'Amsterdam', 'Helsinki', 'Kiew']  # values
+dict = {countries[i]: capitals[i] for i in range(len(countries))}
+try:
+    print(dict['France'])
+except:
+    print('NO VALUE')
+try:
+    print(dict['Poland'])
+except:
+    print('NO VALUE')
