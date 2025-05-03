@@ -1,0 +1,44 @@
+# Write the qsort function
+# Count the number of function calls with a global variable j as described above for Fibonacci
+
+
+j = 0
+
+def partition(lst,k):
+    bigger = []
+    smaller = []
+    equal = []
+    i = 0
+    while i < len(lst):
+        if lst[i] < k:
+            smaller.append(lst[i])
+            i += 1
+        elif lst[i] == k:
+            equal.append(lst[i])
+            i += 1
+        else:
+            bigger.append(lst[i])
+            i += 1
+    merged = [smaller,equal,bigger]
+    return merged
+
+def qsort(lst):
+    global j
+    j += 1
+    n = len(lst)
+    if n <= 1:
+        return lst
+    else:
+        pivot = lst[0]
+        smaller,equal,bigger = partition(lst,pivot)
+        smaller_sorted = qsort(smaller)
+        bigger_sorted = qsort(bigger)
+        lst_sorted = smaller_sorted + equal + bigger_sorted
+        return lst_sorted
+
+import random
+
+lst = [random.randrange(1, 100) for i in range(10)]
+print("Random list:",lst)
+print("Sorted list:",qsort(lst))
+print("The number of function calls:",j)
