@@ -1,0 +1,6 @@
+# Import math and derive cos(2*pi) and sin(-pi)
+
+
+import math
+print(math.cos(2*math.pi))
+print(math.sin(-math.pi))
