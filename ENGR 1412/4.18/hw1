@@ -1,0 +1,13 @@
+# Write a recursive function that accepts a positive integer as its argument and returns the sum of digits. You may use modulo and integer division
+
+
+def sum_of_digits(n):
+    if n == 0:
+        return 0
+    else:
+        last_digit = n % 10
+        rest_of_digits = n // 10
+        return last_digit + sum_of_digits(rest_of_digits)
+
+n = int(input("Enter a number: "))
+print("The sum of digits is",sum_of_digits(n))
