@@ -1,0 +1,5 @@
+# Import the Chengdu weather dataset and produce the Line Chart
+
+
+df = pd.read_excel(r"C:\Users\panyi\Desktop\工程计算机编程概论\Chengdu.xlsx")
+df.plot(x = "Month", y = "Air Pollution", kind = "line")
