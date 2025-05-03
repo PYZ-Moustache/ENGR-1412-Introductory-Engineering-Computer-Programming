@@ -1,0 +1,9 @@
+# Show sin and cos in one figure, with different colors and symbols for points and lines
+
+
+x = np.linspace(0,4*math.pi,50)
+y1 = np.sin(x)
+y2 = np.cos(x)
+plt.plot(x,y1,'.-g',label = 'Sine') # .点 --实线 g绿色
+plt.plot(x,y2,'x:m',label = 'Cosine') # x细叉 :点线 m洋红色
+plt.legend()
