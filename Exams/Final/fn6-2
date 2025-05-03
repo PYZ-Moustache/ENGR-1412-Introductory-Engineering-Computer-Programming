@@ -1,0 +1,17 @@
+# 6-2
+from dataclasses import dataclass
+
+@dataclass
+class le:
+    FamilyName: str
+    position: str
+    university: str  # Changed from int to str as university name is string
+    faculty: str
+    hometown: str
+    age: str
+    
+    def display(self):
+        print(self.FamilyName, self.position, self.university, self.faculty, self.hometown, self.age)
+
+cl = le('Pluemer', 'Full Professor', 'Southwest Jiaotong University', 'Faculty of Geoscience and Environmental Engineering', 'Germany', '50')
+cl.display()  # Fixed: should be cl.display() instead of display(cl)
