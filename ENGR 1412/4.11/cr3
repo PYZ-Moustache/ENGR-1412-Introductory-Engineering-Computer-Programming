@@ -1,0 +1,45 @@
+/*
+Star Exercise: Write a function for adding fractions, using GCD (greatest common divisor) and least common multiple (LCM). Make sure that the fraction are reduced (gcd of numerator and denominator not greater than 1)
+*/
+
+
+def inputFraction():
+    while True:
+        frac = input("Enter a fraction in the form x/y: ")
+        if "/" not in frac:
+            print("Invalid input. Please enter in the form x/y: ")
+            continue
+        nume, deno = frac.split("/")
+        try:
+            nume = int(nume)
+            deno = int(deno)
+            if deno == 0:
+                print("Denominator cannot be zero. Please enter again.")
+                continue
+            return nume, deno
+        except:
+            print("Invalid input. Please enter in the form x/y")
+            continue
+
+def gcd(x, y):
+    while y > 0:
+        x, y = y, x % y
+    return x
+            
+nume1, deno1 = inputFraction()
+nume2, deno2 = inputFraction()
+# calculate the result nume/deno
+nume = nume1 * deno2 + nume2 * deno1
+deno = deno1 * deno2
+# find the GCD of nume and deno
+gcd = gcd(abs(nume),abs(deno))
+# simplify the result
+nume = int(nume / gcd)
+deno = int(deno / gcd)
+if abs(nume) != deno:
+    print(f"The sum of {nume1}/{deno1} and {nume2}/{deno2} is {nume}/{deno}")
+else:
+    if nume > 0:
+        print(f"The sum of {nume1}/{deno1} and {nume2}/{deno2} is 1")
+    elif nume < 0:
+        print(f"The sum of {nume1}/{deno1} and {nume2}/{deno2} is -1")
