@@ -1,0 +1,20 @@
+# Write a sequence of 10 Chinese Surnames and another of 10 Chinese family names.
+
+
+surNames = ['赵', '钱', '孙', '李', '周', '吴', '郑', '王', '冯', '陈']
+familyNames = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十']
+
+  
+# Write a list comprehension which generates all combinations.
+
+  
+class ChineseName:
+    def __init__(self, surName, familyName):
+        self.surName = surName
+        self.familyName = familyName
+    
+    def fullName(self):
+        return self.surName + self.familyName
+
+names = [ChineseName(surName, familyName).fullName() for surName in surNames for familyName in familyNames]
+print(names)
