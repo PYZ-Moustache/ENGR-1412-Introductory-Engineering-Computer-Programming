@@ -1,0 +1,22 @@
+# 题目要求：编写一个快速排序（qsort）函数，并计算函数调用的次数。
+# 题目描述： 快速排序是一种常见的排序算法，通过递归地将数组分割成较小和较大的子数组，然后对子数组进行排序，最终实现整个数组的排序。
+# 请编写一个名为 qsort 的函数，用于对给定的列表进行快速排序。同时，使用一个全局变量 j 来记录函数调用的次数，即每次进入 qsort 函数时 j 的值加 1。
+# 函数 qsort 的输入参数为一个列表 lst，函数的输出为排序后的列表。
+# 请完成上述要求并编写对应的 Python 代码。
+
+
+def fibonacci_recursive(n):
+    if n == 1:
+        return [1]
+    elif n == 2:
+        return [1, 1]
+    else:
+        fib_sequence = fibonacci_recursive(n - 1)
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+        return fib_sequence
+    
+n = int(input("请输入给定数字 n："))
+if n <= 0:
+    print("Sorry, the Fibonacci series is not defined for non-positive integers.")
+else:
+    print(n, "对应的斐波那契数列的值：", fibonacci(n))
