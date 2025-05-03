@@ -1,0 +1,6 @@
+# Import numpy and generate arrays with arange and linspace
+
+
+import numpy as np
+print(np.arange(0,10,1))
+print(np.linspace(1,10,10))
