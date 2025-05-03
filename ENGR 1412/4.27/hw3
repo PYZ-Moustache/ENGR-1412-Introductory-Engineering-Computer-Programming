@@ -1,0 +1,57 @@
+# Write a sequence of 10 Chinese Surnames and another of 10 Chinese family names. Write a list comprehension which generates all combinations.
+# Write a dictionary with student id as key and name as value. Take 10 of your classmates and enter the values stepwise. 
+# Write a Class Point with two arguments x and y
+# Define a class method which gets another point as input and calculates the (Euklidean) distance between self and the other point (find  how to calculate distance if you do not know)
+# Define a subclass rectangle with two new parameters  length and width
+# Write a Method to calculate the area
+# Star Exercise: write a method which gets another rectangle as input and checks if the two rectangles overlap. Hint: make a sketch with paper and pencil and look at x and y values separately, use logical operators such as and, or, and not
+
+
+import math
+
+class point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        
+    def distance(self, other):
+        return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
+
+class rectangle(point):
+    def __init__(self, x, y, length, width):
+        super().__init__(x, y)
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+  
+    def overlap(self, other):
+        x_overlap = (self.x <= other.x <= self.x + self.length) or (other.x <= self.x <= other.x + other.length)
+        y_overlap = (self.y <= other.y <= self.y + self.width) or (other.y <= self.y <= other.y + other.width)
+        return x_overlap and y_overlap
+
+x1 = float(input("Enter the x-coordinate of a point: "))
+y1 = float(input("Enter the y-coordinate of a point: "))
+length1 = float(input("Enter the length of the first rectangle: "))
+width1 = float(input("Enter the width of the first rectangle: "))
+rect1 = rectangle(x1, y1, length1, width1)
+
+x2 = float(input("Enter the x-coordinate of the other point: "))
+y2 = float(input("Enter the y-coordinate of the other point: "))
+length2 = float(input("Enter the length of the second rectangle: "))
+width2 = float(input("Enter the width of the second rectangle: "))
+rect2 = rectangle(x2, y2, length2, width2)
+
+distance = rect1.distance(rect2)
+print("The distance between the two points is:", distance)
+
+area1 = rect1.area()
+print("The area of the first rectangle is:", area1)
+area2 = rect2.area()
+print("The area of the second rectangle is:", area2)
+
+if rect1.overlap(rect2):
+    print("The two rectangles overlap.")
+else:
+    print("The two rectangles do not overlap.")
