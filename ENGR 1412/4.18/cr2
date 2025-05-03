@@ -1,0 +1,32 @@
+# Write the recursive and iterative Fibonacci function
+# Count the number of recursive calls of Fibonacci with a global variable j as described above
+
+
+j = 0
+
+def fibonacci_recursive(n):
+    global j
+    j += 1
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
+
+def fibonacci_iterative(n):
+    if n <= 1:
+        return 1
+    else:
+        temp = [1,1]
+        for i in range (2,n):
+            temp.append(temp[-1]+temp[-2])
+        return temp[-1]
+
+
+n = int(input("Enter a number: "))
+recursive = fibonacci_recursive(n)
+iterative = fibonacci_iterative(n)
+print("The", n, "th number in the Fibonacci sequence is: (calculated recursively)", recursive)
+print("The number of recursive calls is", j)
+print("The", n, "th number in the Fibonacci sequence is: (calculated iteratively)", iterative)
