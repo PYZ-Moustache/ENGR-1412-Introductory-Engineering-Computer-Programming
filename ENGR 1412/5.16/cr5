@@ -1,0 +1,7 @@
+# Import the Capitals dataset from the excel sheet 
+# (put it in the same directory as your Jupyter files),
+# display, select single rows and columns
+
+
+df = pd.read_excel(r"C:\Users\panyi\Desktop\工程计算机编程概论\capitals.xlsx")
+df
