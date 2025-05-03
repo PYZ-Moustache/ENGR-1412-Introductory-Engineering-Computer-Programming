@@ -1,0 +1,12 @@
+# 4
+
+lst=[1,-3,2,-4,3,-5,4,-6,5,0,-7,6,-8,7,-9,8,10]
+max1=lst[0]
+max2=lst[1]
+for i in range(2,len(lst)):
+    if lst[i]>max1 or lst[i]>max2:
+        if max1<max2:
+            max1=lst[i]
+        else:
+            max2=lst[i]
+print(f"The two largest numbers of the list is {max1} and {max2}.")
