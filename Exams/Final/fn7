@@ -1,0 +1,23 @@
+# 7
+import numpy as np
+from numpy import polynomial
+
+po = np.polynomial.Polynomial([36, 36, 13, -13, -1, 1])
+print(po)
+
+print("roots:", po.roots())
+print("derivative:", po.deriv())
+print("integral:", po.integ())
+
+xs = np.linspace(-3.1, 3, 100)
+ys = po(xs)
+
+import matplotlib.pyplot as plt
+plt.plot(xs, ys)
+# plt.show()
+
+roots = po.roots()
+# plt.axhline(y=0, linestyle="-", color="k")
+for i in range(len(roots)):
+    plt.plot(roots[i], po(roots[i]), 'xg', markersize=10)
+plt.legend()
