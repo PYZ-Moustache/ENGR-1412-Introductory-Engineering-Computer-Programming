@@ -1,0 +1,6 @@
+# Generate a List of the numbers divisible by 3 up to 33 and print them with a for loop
+
+
+for n in range(34):
+    if n % 3 == 0:
+        print(n)
