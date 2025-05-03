@@ -1,0 +1,6 @@
+# 2
+lst = [[1, 2], [3, 4]]
+for i in range(2):
+    lst[0][i] /= 5
+    lst[1][i] /= 7
+print(lst)
