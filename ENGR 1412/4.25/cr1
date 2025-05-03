@@ -1,0 +1,13 @@
+# Write a test if a Chinese character is in your Surname or Family Name
+
+
+surName = "奕蓁"
+familyName = "潘"
+char = input("Please enter a character: ")
+
+if char in surName:
+    print(char, "is in my surname")
+elif char in familyName:
+    print(char, "is in my family name")
+else:
+    print(char, "isn't in my name.")
