@@ -1,0 +1,73 @@
+# Modify the qsort function by using an intelligent pivot, as suggested above
+# Count the number of function calls with a global variable
+# Generate a long list with random integers, apply qsort and count the number of function calls, both for the standard version and with intelligent pivot
+
+
+j_intelligent = 0
+j_dumb = 0
+
+def partition(lst,k):
+    bigger = []
+    smaller = []
+    equal = []
+    i = 0
+    while i < len(lst):
+        if lst[i] < k:
+            smaller.append(lst[i])
+            i += 1
+        elif lst[i] == k:
+            equal.append(lst[i])
+            i += 1
+        else:
+            bigger.append(lst[i])
+            i += 1
+    merged = [smaller,equal,bigger]
+    return merged
+
+def intelligent_pivot(a,b,c):
+        if a <= b <= c or c <= b <= a:
+            return b
+        elif b <= a <= c or c <= a <= b:
+            return a
+        else:
+            return c
+
+def qsort_intelligent(lst):
+    global j_intelligent
+    j_intelligent += 1
+    n = len(lst)
+    if n <= 1:
+        return lst
+    else:
+        if n >= 3:
+            a, b, c = random.sample(lst, 3)
+            pivot = intelligent_pivot(a,b,c)
+        else:
+            pivot = lst[0]
+        smaller,equal,bigger = partition(lst,pivot)
+        smaller_sorted = qsort_intelligent(smaller)
+        bigger_sorted = qsort_intelligent(bigger)
+        lst_sorted = smaller_sorted + equal + bigger_sorted
+        return lst_sorted
+
+def qsort_dumb(lst):
+    global j_dumb
+    j_dumb += 1
+    n = len(lst)
+    if n <= 1:
+        return lst
+    else:
+        pivot = lst[0]
+        smaller,equal,bigger = partition(lst,pivot)
+        smaller_sorted = qsort_dumb(smaller)
+        bigger_sorted = qsort_dumb(bigger)
+        lst_sorted = smaller_sorted + equal + bigger_sorted
+        return lst_sorted
+
+import random
+lst = [random.randrange(1, 100) for i in range(20)]
+print("random list:",lst)
+print("sorted list: (intelligent)",qsort_intelligent(lst))
+print("The number of function calls: (intelligent)",j_intelligent)
+print("sorted list: (dumb)",qsort_dumb(lst))
+print("The number of function calls: (dumb)",j_dumb)
