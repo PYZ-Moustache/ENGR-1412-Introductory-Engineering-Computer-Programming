@@ -1,0 +1,4 @@
+# select single columns
+
+
+df.loc[0:2,"Inhabitants (Mio.)"]
