@@ -1,0 +1,8 @@
+# 8
+x = np.linspace(0, 3 * math.pi, 50)
+y1 = np.sin(x)
+y2 = np.cos(x + math.pi/2)
+plt.plot(x, y1, '.-g', label='Sin(x)')
+plt.plot(x, y2, 'x:m', label='Cos(x+pi/2)')
+plt.legend()
+plt.show()  # Added to display the plot
