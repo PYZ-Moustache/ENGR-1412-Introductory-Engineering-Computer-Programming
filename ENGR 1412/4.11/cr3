@@ -1,6 +1,4 @@
-/*
-Star Exercise: Write a function for adding fractions, using GCD (greatest common divisor) and least common multiple (LCM). Make sure that the fraction are reduced (gcd of numerator and denominator not greater than 1)
-*/
+# Star Exercise: Write a function for adding fractions, using GCD (greatest common divisor) and least common multiple (LCM). Make sure that the fraction are reduced (gcd of numerator and denominator not greater than 1)
 
 
 def inputFraction():
